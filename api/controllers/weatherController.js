@@ -6,7 +6,7 @@ require("dotenv").config();
 // weather API
 exports.index = function(req, res) {
   let weatherData = {};
-  //async function getWeather() {
+  async function getWeather() {
     const apiKey = process.env.OPEN_WEATHER_MAPS_API_KEY;
     const lat = "27.49";
     const lon = "-82.57";
@@ -14,18 +14,24 @@ exports.index = function(req, res) {
     
     
     try {
-      const response = /*await*/ axios.get(url);
-      console.log(response);
-      weatherData = response;
-      res.send( { title: 'Weather', weather_data: weatherData} );
+      const response = await axios.get(url);
+      console.log(response.data);
+      weatherData = response.data;
+      // return response.data;
       
     } catch (error) {
-      console.error(error);
+      next(error);
     }
 
     
-  //}
-//getWeather();
+  }
+
+  getWeather();
+  if (weatherData != {}) {
+    res.json( { title: 'Weather', weather_data: weatherData} );
+    console.log(weatherData);
+  }
+  console.log(weatherData);
   
   
     
