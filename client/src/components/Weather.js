@@ -30,11 +30,9 @@ function Weather() {
 
   if(data == "") {
     return (
-      <main>
-        <div className="box-shadow">
-          <p>Awaiting API data...</p>
-        </div>
-      </main>
+      <div className="box-shadow">
+        <p>Awaiting API data...</p>
+      </div>
     );
   } else {
     return (
@@ -42,12 +40,13 @@ function Weather() {
         <table className="Weather">
           <thead>
             <h3>{data.title}</h3>
+            
+          </thead>
+          <tbody>
             <tr>
               <th>City</th>
               <td>{data.weather_data.name}</td>
             </tr>
-          </thead>
-          <tbody>
             <tr>
               <th>Latitude</th>
               <td>{data.weather_data.coord.lat}</td>

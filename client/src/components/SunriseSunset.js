@@ -35,19 +35,18 @@ function SunriseSunset() {
 
   if(data == "") {
     return (
-      <main>
-        <div className="box-shadow">
-          <p>Awaiting Sunrise and Sunset API data...</p>
-        </div>
-      </main>
+      <div className="box-shadow">
+        <p>Awaiting Sunrise and Sunset API data...</p>
+      </div>
     );
   } else {
     return (
       
       <table className="SunriseSunset">
         <thead>
-          
-          <tr><h3>Sunrise and Sunset</h3></tr>
+          <tr>
+            <h3>Sunrise and Sunset</h3>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -82,6 +81,16 @@ function SunriseSunset() {
             <th>Solar Noon</th>
             <td>{convertToEasternStandardTime(data.solar_noon)} EST</td>
           </tr>
+          <tr>
+            <th>Sunrise</th>
+            <td>{convertToEasternStandardTime(data.sunrise)} EST</td>
+          </tr>
+          <tr>
+            <th>Sunset</th>
+            <td>{convertToEasternStandardTime(data.sunset)} EST</td>
+          </tr>
+        </tbody>
+        <tbody>
           <tr>
             <th>Sunrise</th>
             <td>{convertToEasternStandardTime(data.sunrise)} EST</td>
