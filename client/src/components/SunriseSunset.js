@@ -46,46 +46,48 @@ function SunriseSunset() {
     return (
       <div className="SunriseSunset">
         <table>
-          <tr>
-            <th>Astronomical Twilight Begin</th>
-            <td>{data.astronomical_twilight_begin}</td>
-          </tr>
-          <tr>
-            <th>Astronomical Twilight End</th>
-            <td>{data.astronomical_twilight_end}</td>
-          </tr>
-          <tr>
-            <th>Civil Twilight Begin</th>
-            <td>{data.civil_twilight_begin}</td>
-          </tr>
-          <tr>
-            <th>Civil Twilight End</th>
-            <td>{data.civil_twilight_end}</td>
-          </tr>
-          <tr>
-            <th>Day Length</th>
-            <td>{data.day_length}</td>
-          </tr>
-          <tr>
-            <th>Nautical Twilight Begin</th>
-            <td>{data.nautical_twilight_begin}</td>
-          </tr>
-          <tr>
-            <th>Nautical Twilight End</th>
-            <td>{data.nautical_twilight_end}</td>
-          </tr>
-          <tr>
-            <th>Solar Noon</th>
-            <td>{data.solar_noon}</td>
-          </tr>
-          <tr>
-            <th>Sunrise</th>
-            <td>{data.sunrise}</td>
-          </tr>
-          <tr>
-            <th>Sunset</th>
-            <td>{data.sunset}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Astronomical Twilight Begin</th>
+              <td>{data.astronomical_twilight_begin}</td>
+            </tr>
+            <tr>
+              <th>Astronomical Twilight End</th>
+              <td>{data.astronomical_twilight_end}</td>
+            </tr>
+            <tr>
+              <th>Civil Twilight Begin</th>
+              <td>{data.civil_twilight_begin}</td>
+            </tr>
+            <tr>
+              <th>Civil Twilight End</th>
+              <td>{data.civil_twilight_end}</td>
+            </tr>
+            <tr>
+              <th>Day Length</th>
+              <td>{data.day_length}</td>
+            </tr>
+            <tr>
+              <th>Nautical Twilight Begin</th>
+              <td>{data.nautical_twilight_begin}</td>
+            </tr>
+            <tr>
+              <th>Nautical Twilight End</th>
+              <td>{data.nautical_twilight_end}</td>
+            </tr>
+            <tr>
+              <th>Solar Noon</th>
+              <td>{data.solar_noon}</td>
+            </tr>
+            <tr>
+              <th>Sunrise</th>
+              <td>{data.sunrise}</td>
+            </tr>
+            <tr>
+              <th>Sunset</th>
+              <td>{data.sunset}</td>
+            </tr>
+          </tbody>
         </table>
 
 
