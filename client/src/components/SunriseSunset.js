@@ -21,18 +21,17 @@ function SunriseSunset() {
     }
   }, []);
 
-  // async function getSunTimes() {
-  //   const url = "https://api.sunrise-sunset.org/json?lat=27.498928&lng=-82.574821";
-  //   try {
-  //     const response = await axios.get(url);
-  //     console.log(response);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-  // getSunTimes();
+  function convertToEasternStandardTime(gmtTime) {
+    let gmtArr = gmtTime.split(":");
+    gmtArr[0] -= 5; //subtract 5 hour difference GMT to EST
 
-  console.log(data);
+    if(gmtArr[0] > 0) {
+      return gmtArr.join(":");
+    } else {
+      gmtArr[0] = 12 + gmtArr[0]; //if number goes under 1, subtract remainder from 12
+      return gmtArr.join(":");
+    }
+  }
 
   if(data == "") {
     return (
@@ -44,63 +43,55 @@ function SunriseSunset() {
     );
   } else {
     return (
-      <div className="SunriseSunset">
-        <table>
-          <tbody>
-            <tr>
-              <th>Astronomical Twilight Begin</th>
-              <td>{data.astronomical_twilight_begin}</td>
-            </tr>
-            <tr>
-              <th>Astronomical Twilight End</th>
-              <td>{data.astronomical_twilight_end}</td>
-            </tr>
-            <tr>
-              <th>Civil Twilight Begin</th>
-              <td>{data.civil_twilight_begin}</td>
-            </tr>
-            <tr>
-              <th>Civil Twilight End</th>
-              <td>{data.civil_twilight_end}</td>
-            </tr>
-            <tr>
-              <th>Day Length</th>
-              <td>{data.day_length}</td>
-            </tr>
-            <tr>
-              <th>Nautical Twilight Begin</th>
-              <td>{data.nautical_twilight_begin}</td>
-            </tr>
-            <tr>
-              <th>Nautical Twilight End</th>
-              <td>{data.nautical_twilight_end}</td>
-            </tr>
-            <tr>
-              <th>Solar Noon</th>
-              <td>{data.solar_noon}</td>
-            </tr>
-            <tr>
-              <th>Sunrise</th>
-              <td>{data.sunrise}</td>
-            </tr>
-            <tr>
-              <th>Sunset</th>
-              <td>{data.sunset}</td>
-            </tr>
-          </tbody>
-        </table>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
+      
+      <table className="SunriseSunset">
+        <thead>
+          
+          <tr><h3>Sunrise and Sunset</h3></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Astronomical Twilight Begin</th>
+            <td>{convertToEasternStandardTime(data.astronomical_twilight_begin)} EST</td>
+          </tr>
+          <tr>
+            <th>Astronomical Twilight End</th>
+            <td>{convertToEasternStandardTime(data.astronomical_twilight_end)} EST</td>
+          </tr>
+          <tr>
+            <th>Civil Twilight Begin</th>
+            <td>{convertToEasternStandardTime(data.civil_twilight_begin)} EST</td>
+          </tr>
+          <tr>
+            <th>Civil Twilight End</th>
+            <td>{convertToEasternStandardTime(data.civil_twilight_end)} EST</td>
+          </tr>
+          <tr>
+            <th>Day Length</th>
+            <td>{data.day_length}</td>
+          </tr>
+          <tr>
+            <th>Nautical Twilight Begin</th>
+            <td>{convertToEasternStandardTime(data.nautical_twilight_begin)} EST</td>
+          </tr>
+          <tr>
+            <th>Nautical Twilight End</th>
+            <td>{convertToEasternStandardTime(data.nautical_twilight_end)} EST</td>
+          </tr>
+          <tr>
+            <th>Solar Noon</th>
+            <td>{convertToEasternStandardTime(data.solar_noon)} EST</td>
+          </tr>
+          <tr>
+            <th>Sunrise</th>
+            <td>{convertToEasternStandardTime(data.sunrise)} EST</td>
+          </tr>
+          <tr>
+            <th>Sunset</th>
+            <td>{convertToEasternStandardTime(data.sunset)} EST</td>
+          </tr>
+        </tbody>
+      </table>
     );
   }
 }

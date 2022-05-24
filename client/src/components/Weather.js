@@ -38,14 +38,12 @@ function Weather() {
     );
   } else {
     return (
-  
-      <div className="Weather">
-        
-        
-        <table>
+
+        <table className="Weather">
           <thead>
+            <h3>{data.title}</h3>
             <tr>
-              <th>{data.title}</th>
+              <th>City</th>
               <td>{data.weather_data.name}</td>
             </tr>
           </thead>
@@ -80,7 +78,6 @@ function Weather() {
             </tr>
           </tbody>
         </table>
-      </div>
     );
   }
 }
