@@ -9,8 +9,6 @@ function Weather() {
 
   const backendURL = `http://localhost:9000/weather`;
 
-  // converting Kelvin temp to Fahrenheit temp: F =(K - 273.15)* 1.8000+ 32.00
-
   useEffect(() => {
     if(isProcessed == false) {
       axios.get(backendURL)
