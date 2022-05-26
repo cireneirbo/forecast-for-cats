@@ -1,5 +1,6 @@
 .App {
-  box-shadow: 10px 5px 5px black;
+  /* box-shadow: 10px 5px 5px black; */
+  display: inline-block;
 }
 
 h3 {
@@ -41,4 +42,9 @@ tbody {
   border: 1px solid black;
   width: auto;
   box-shadow: 5px 5px 15px black;
+}
+
+.images {
+  width: 20%;
+  height: 20%;
 }
