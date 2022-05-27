@@ -1,19 +1,9 @@
 .App {
-  /* box-shadow: 10px 5px 5px black; */
-  /* display: inline-block; */
-  /* background-image: url("./images/pixel_cat_bg.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-: ;*/
   width: 1280px;
-  height: 960px; 
+  height: 960px;
 }
 
 .CatDialogue {
-  /* box-shadow: 10px 5px 5px black; */
-  /* display: inline-block; */
   background-image: url("./images/pixel_cat_bg.png");
   background-size: cover;
   background-position: center;
@@ -23,6 +13,16 @@
   height: 960px;
 }
 
+.CatTalk {
+  position: absolute;
+  left: 42%;
+  top: 42%;
+  max-width: 25%;
+  min-width: 150px;
+  word-wrap: break-word;
+  font-size: 36px;
+}
+
 h3 {
   text-align: center;
 }
@@ -30,26 +30,18 @@ h3 {
 table {
   padding: 0%;
   margin: 1%;
-  /* float: left;
-  display: inline-table; */
-  /* border: 1px solid black; */
-  width: auto;
-  /* box-shadow: 5px 5px 15px black; */
+  width: 400px;
 }
 
 th, td {
   margin: 0%;
   padding: 1%;
-  /* width: 50%; */
   text-align: left;
 }
 
 tbody {
   padding: 0%;
   margin: 1%;
-  /* float: right;
-  display: inline-table; */
-  
   border: 1px solid black;
   width: auto;
   box-shadow: 5px 5px 15px black;
@@ -58,8 +50,6 @@ tbody {
 .box-shadow {
   padding: 0%;
   margin: 1%;
-  float: left;
-  display: inline-table;
   border: 1px solid black;
   width: auto;
   box-shadow: 5px 5px 15px black;
@@ -73,10 +63,26 @@ tbody {
   opacity: 8%;
 }
 
-.SunriseSunset, .Weather {
-  position: relative;
-  top: 0px;
-  left: 1500px;
+.SunriseSunset1 {
+  position: absolute;
+  top: 0%;
+  left: 75%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.SunriseSunset2 {
+  position: absolute;
+  top: 20%;
+  left: 75%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.Weather {
+  position: absolute;
+  top: 40%;
+  left: 75%;
   margin: 10px;
   padding: 10px;
 }

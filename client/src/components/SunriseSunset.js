@@ -42,12 +42,32 @@ function SunriseSunset() {
   } else {
     return (
       <div>
-      <table className="SunriseSunset">
+      <table className="SunriseSunset1">
         <thead>
           <tr>
             <h3>Sunrise and Sunset</h3>
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            <th>Sunrise</th>
+            <td>{convertToEasternStandardTime(data.sunrise)} EST</td>
+          </tr>
+          <tr>
+            <th>Sunset</th>
+            <td>{convertToEasternStandardTime(data.sunset)} EST</td>
+          </tr>
+          <tr>
+            <th>Day Length</th>
+            <td>{data.day_length}</td>
+          </tr>
+          <tr>
+            <th>Solar Noon</th>
+            <td>{convertToEasternStandardTime(data.solar_noon)} EST</td>
+          </tr>
+        </tbody>
+      </table>
+      <table className="SunriseSunset2">
         <tbody>
           <tr>
             <th>Astronomical Twilight Begin</th>
@@ -66,28 +86,12 @@ function SunriseSunset() {
             <td>{convertToEasternStandardTime(data.civil_twilight_end)} EST</td>
           </tr>
           <tr>
-            <th>Day Length</th>
-            <td>{data.day_length}</td>
-          </tr>
-          <tr>
             <th>Nautical Twilight Begin</th>
             <td>{convertToEasternStandardTime(data.nautical_twilight_begin)} EST</td>
           </tr>
           <tr>
             <th>Nautical Twilight End</th>
             <td>{convertToEasternStandardTime(data.nautical_twilight_end)} EST</td>
-          </tr>
-          <tr>
-            <th>Solar Noon</th>
-            <td>{convertToEasternStandardTime(data.solar_noon)} EST</td>
-          </tr>
-          <tr>
-            <th>Sunrise</th>
-            <td>{convertToEasternStandardTime(data.sunrise)} EST</td>
-          </tr>
-          <tr>
-            <th>Sunset</th>
-            <td>{convertToEasternStandardTime(data.sunset)} EST</td>
           </tr>
         </tbody>
       </table>

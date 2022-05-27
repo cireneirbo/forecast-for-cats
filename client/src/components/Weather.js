@@ -39,25 +39,20 @@ function Weather() {
       <div>
         <table className="Weather">
           <thead>
-            <h3>{data.title}</h3>
-            
+            <h3>{data.title} for {data.weather_data.name}</h3>
           </thead>
           <tbody>
             <tr>
-              <th>City</th>
-              <td>{data.weather_data.name}</td>
-            </tr>
-            <tr>
-              <th>Latitude</th>
-              <td>{data.weather_data.coord.lat}</td>
-            </tr>
-            <tr>
-              <th>Longitude</th>
-              <td>{data.weather_data.coord.lon}</td>
+              <th>Current Temperature</th>
+              <td>{convertKelvinToFahrenheit(data.weather_data.main.temp)} F</td>
             </tr>
             <tr>
               <th>Feels Like</th>
               <td>{convertKelvinToFahrenheit(data.weather_data.main.feels_like)} F</td>
+            </tr>
+            <tr>
+              <th>Temperature Min-Max</th>
+              <td>{convertKelvinToFahrenheit(data.weather_data.main.temp_min)} F - {convertKelvinToFahrenheit(data.weather_data.main.temp_max)} F</td>
             </tr>
             <tr>
               <th>Humidity</th>
@@ -65,18 +60,13 @@ function Weather() {
             </tr>
             <tr>
               <th>Barometric Pressure</th>
-              <td>{data.weather_data.main.pressure} millibars</td>
-            </tr>
-            <tr>
-              <th>Temperature Min-Max</th>
-              <td>{convertKelvinToFahrenheit(data.weather_data.main.temp_min)} F - {convertKelvinToFahrenheit(data.weather_data.main.temp_max)} F</td>
-            </tr>
-            <tr>
-              <th>Current Temperature</th>
-              <td>{convertKelvinToFahrenheit(data.weather_data.main.temp)} F</td>
+              <td>{data.weather_data.main.pressure} mb</td>
             </tr>
           </tbody>
         </table>
+
+        <p className="CatTalk">Today will be {data.weather_data.weather[0].main}, with a {data.weather_data.weather[0].description}!</p>
+
       </div>
     );
   }
