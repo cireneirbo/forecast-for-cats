@@ -41,7 +41,7 @@ function SunriseSunset() {
     );
   } else {
     return (
-      
+      <div>
       <table className="SunriseSunset">
         <thead>
           <tr>
@@ -90,17 +90,8 @@ function SunriseSunset() {
             <td>{convertToEasternStandardTime(data.sunset)} EST</td>
           </tr>
         </tbody>
-        <tbody>
-          <tr>
-            <th>Sunrise</th>
-            <td>{convertToEasternStandardTime(data.sunrise)} EST</td>
-          </tr>
-          <tr>
-            <th>Sunset</th>
-            <td>{convertToEasternStandardTime(data.sunset)} EST</td>
-          </tr>
-        </tbody>
       </table>
+      </div>
     );
   }
 }

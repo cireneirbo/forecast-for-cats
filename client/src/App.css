@@ -1,6 +1,26 @@
 .App {
   /* box-shadow: 10px 5px 5px black; */
-  display: inline-block;
+  /* display: inline-block; */
+  /* background-image: url("./images/pixel_cat_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-: ;*/
+  width: 1280px;
+  height: 960px; 
+}
+
+.CatDialogue {
+  /* box-shadow: 10px 5px 5px black; */
+  /* display: inline-block; */
+  background-image: url("./images/pixel_cat_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 1500px;
+  height: 960px;
 }
 
 h3 {
@@ -10,8 +30,8 @@ h3 {
 table {
   padding: 0%;
   margin: 1%;
-  float: left;
-  display: inline-table;
+  /* float: left;
+  display: inline-table; */
   /* border: 1px solid black; */
   width: auto;
   /* box-shadow: 5px 5px 15px black; */
@@ -27,8 +47,9 @@ th, td {
 tbody {
   padding: 0%;
   margin: 1%;
-  float: right;
-  display: inline-table;
+  /* float: right;
+  display: inline-table; */
+  
   border: 1px solid black;
   width: auto;
   box-shadow: 5px 5px 15px black;
@@ -44,7 +65,18 @@ tbody {
   box-shadow: 5px 5px 15px black;
 }
 
-.images {
-  width: 20%;
-  height: 20%;
+#pixelCat {
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  box-shadow: 5px 5px 15px black;
+  opacity: 8%;
+}
+
+.SunriseSunset, .Weather {
+  position: relative;
+  top: 0px;
+  left: 1500px;
+  margin: 10px;
+  padding: 10px;
 }

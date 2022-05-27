@@ -1,15 +1,22 @@
 import './App.css';
 import SunriseSunset from './components/SunriseSunset';
 import Weather from './components/Weather';
-import pixelCat from './pixel_cat.PNG';
+import pixelCat from './images/pixel_cat.png';
 
 function App() {
   return (
     <div className="App">
-      <img src={pixelCat} className="images" alt="pixel cat"/>
-      <Weather />
+      <div className="CatDialogue">
+        <SunriseSunset />
+        <Weather />
+      </div>
       
-      <SunriseSunset />
+      
+      
+      
+      {/* <div >
+        <img src={pixelCat} className="images" id="pixelCat" alt="pixel cat"/>
+      </div> */}
       
     </div>
   );
