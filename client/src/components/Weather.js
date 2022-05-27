@@ -65,7 +65,7 @@ function Weather() {
           </tbody>
         </table>
 
-        <p className="CatTalk">Today will be {data.weather_data.weather[0].main}, with a {data.weather_data.weather[0].description}!</p>
+        <p className="CatTalk">Today will be {data.weather_data.weather[0].main}, with {data.weather_data.weather[0].description}!</p>
 
       </div>
     );
