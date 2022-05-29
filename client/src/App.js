@@ -9,7 +9,7 @@ function App() {
       <div className="CatDialogue">
         <SunriseSunset />
         <Weather />
-        <p className="dev-plug">Look at what my <a href="https://linktr.ee/codeethicallywitheric" target="_blank">owner</a> does!</p>
+        <p className="dev-plug">Look at what else my <a href="https://linktr.ee/codeethicallywitheric" target="_blank">owner</a> does!</p>
       </div>
     </div>
   );
