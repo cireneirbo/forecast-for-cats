@@ -1,6 +1,16 @@
-.App {
-  width: 1280px;
-  height: 960px;
+
+
+@media only screen and (max-width: 600px) {
+  .App {
+    display: flex;
+  }
+
+  .SunriseSunset1, .SunriseSunset2 {
+    position: relative;
+    left: 0%;
+    margin: 10px;
+    padding: 10px;
+  }
 }
 
 h3 {
@@ -27,70 +37,78 @@ tbody {
   box-shadow: 5px 5px 15px black;
 }
 
-#pixelCat {
-  width: 50%;
-  height: 50%;
-  border: 1px solid black;
-  box-shadow: 5px 5px 15px black;
-  opacity: 8%;
-}
+@media screen and (min-width: 1024px) {
+  
+  .App {
+    width: 1280px;
+    height: 960px;
+  }
+  
+  #pixelCat {
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px black;
+    opacity: 8%;
+  }
 
-.box-shadow {
-  padding: 0%;
-  margin: 1%;
-  border: 1px solid black;
-  width: auto;
-  box-shadow: 5px 5px 15px black;
-}
+  .box-shadow {
+    padding: 0%;
+    margin: 1%;
+    border: 1px solid black;
+    width: auto;
+    box-shadow: 5px 5px 15px black;
+  }
 
-.SunriseSunset1 {
-  position: absolute;
-  top: 0%;
-  left: 75%;
-  margin: 10px;
-  padding: 10px;
-}
+  .SunriseSunset1 {
+    position: absolute;
+    top: 0%;
+    left: 75%;
+    margin: 10px;
+    padding: 10px;
+  }
 
-.SunriseSunset2 {
-  position: absolute;
-  top: 20%;
-  left: 75%;
-  margin: 10px;
-  padding: 10px;
-}
+  .SunriseSunset2 {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    margin: 10px;
+    padding: 10px;
+  }
 
-.Weather {
-  position: absolute;
-  top: 40%;
-  left: 75%;
-  margin: 10px;
-  padding: 10px;
-}
+  .Weather {
+    position: absolute;
+    top: 40%;
+    left: 75%;
+    margin: 10px;
+    padding: 10px;
+  }
 
-.dev-plug {
-  position: absolute;
-  bottom: 0%;
-  left: 85%;
-  margin: 10px;
-  padding: 10px;
-}
+  .dev-plug {
+    position: absolute;
+    bottom: 0%;
+    left: 85%;
+    margin: 10px;
+    padding: 10px;
+  }
 
-.CatDialogue {
-  background-image: url("./images/pixel_cat_bg.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  width: 1500px;
-  height: 960px;
-}
+  .CatDialogue {
+    background-image: url("./images/pixel_cat_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 1500px;
+    height: 960px;
+  }
 
-.CatTalk {
-  position: absolute;
-  left: 42%;
-  top: 42%;
-  max-width: 25%;
-  min-width: 150px;
-  word-wrap: break-word;
-  font-size: 36px;
+  .CatTalk {
+    position: absolute;
+    left: 42%;
+    top: 42%;
+    max-width: 25%;
+    min-width: 150px;
+    word-wrap: break-word;
+    font-size: 36px;
+  }
 }
