@@ -1,7 +1,7 @@
 import './App.css';
 import SunriseSunset from './components/SunriseSunset';
 import Weather from './components/Weather';
-import pixelCat from './images/pixel_cat.png';
+import pixelCat from './images/pixelCatalpha2.png';
 
 function App() {
   return (

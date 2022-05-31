@@ -5,7 +5,6 @@ h3 {
 table {
   padding: 0%;
   margin: 1%;
-  width: 400px;
 }
 
 th, td {
@@ -22,10 +21,43 @@ tbody {
   box-shadow: 5px 5px 15px black;
 }
 
+.App {
+  min-width: 300px;
+}
+
+/* For uniform tables only*/
+@media screen and (max-width: 400px){
+  table {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 500px){
+  table {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 600px){
+  table {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  table {
+    width: 500px;
+  }
+}
+
 /* Smaller screens */
-@media only screen and (max-width: 600px) {
-  .App {
-    width: 600px;
+@media screen and (max-width: 600px) {
+
+  #pixelCat {
+    max-width: 600px;
+    opacity: 88%;
+    margin: 10px;
+    padding: 10px;
   }
 
   .box-shadow {
@@ -62,18 +94,73 @@ tbody {
     word-wrap: break-word;
     font-size: 36px;
     text-align: center;
+    padding: 0%;
+    margin: 1%;
+    border: 1px solid black;
   }
 }
 
-/* Medium screens
-@media screen and (min-width: 601px), screen and (max-width: 1023px) {
+/* Medium - Smaller screens */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+  #pixelCat {
+    max-width: 600px;
+    opacity: 88%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .box-shadow {
+    padding: 0%;
+    margin: 1%;
+    border: 1px solid black;
+    width: auto;
+    box-shadow: 5px 5px 15px black;
+  }
+
+  .SunriseSunset1 {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .SunriseSunset2 {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .Weather {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .dev-plug {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .CatTalk {
+    max-width: 450px;
+    min-width: 150px;
+    word-wrap: break-word;
+    font-size: 36px;
+    text-align: center;
+    padding: 0%;
+    margin: 1%;
+    border: 1px solid black;
+  }
+}
+
+/* Medium-large screens */
+@media screen and (min-width: 801px) and (max-width: 1023px) {
   
   #pixelCat {
-    width: 30%;
-    height: 30%;
-    border: 1px solid black;
-    box-shadow: 5px 5px 15px black;
-    opacity: 78%;
+    max-width: 600px;
+    opacity: 88%;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    margin: 10px;
+    padding: 10px;
   }
 
   .box-shadow {
@@ -87,7 +174,7 @@ tbody {
   .SunriseSunset1 {
     position: absolute;
     top: 0%;
-    left: 75%;
+    right: 0%;
     margin: 10px;
     padding: 10px;
   }
@@ -95,7 +182,7 @@ tbody {
   .SunriseSunset2 {
     position: absolute;
     top: 20%;
-    left: 75%;
+    right: 0%;
     margin: 10px;
     padding: 10px;
   }
@@ -103,7 +190,7 @@ tbody {
   .Weather {
     position: absolute;
     top: 40%;
-    left: 75%;
+    right: 0%;
     margin: 10px;
     padding: 10px;
   }
@@ -111,21 +198,24 @@ tbody {
   .dev-plug {
     position: absolute;
     bottom: 0%;
-    left: 85%;
+    right: 0%;
     margin: 10px;
     padding: 10px;
   }
 
-  .CatTalk {
+  .CatTalk { 
     position: absolute;
-    left: 42%;
-    top: 42%;
-    max-width: 25%;
-    min-width: 150px;
+    left: 10%;
+    top: 10%;
+    max-width: 250px;
+    min-width: 25px;
     word-wrap: break-word;
     font-size: 36px;
+    padding: 1%;
+    margin: 1%;
+    border: 1px solid black;
   }
-} */
+}
 
 /* Larger screens */
 @media screen and (min-width: 1024px) {
@@ -151,7 +241,7 @@ tbody {
   .SunriseSunset1 {
     position: absolute;
     top: 0%;
-    left: 75%;
+    right: 0%;
     margin: 10px;
     padding: 10px;
   }
@@ -159,7 +249,7 @@ tbody {
   .SunriseSunset2 {
     position: absolute;
     top: 20%;
-    left: 75%;
+    right: 0%;
     margin: 10px;
     padding: 10px;
   }
@@ -167,7 +257,7 @@ tbody {
   .Weather {
     position: absolute;
     top: 40%;
-    left: 75%;
+    right: 0%;
     margin: 10px;
     padding: 10px;
   }
@@ -175,7 +265,7 @@ tbody {
   .dev-plug {
     position: absolute;
     bottom: 0%;
-    left: 80%;
+    right: 5%;
     margin: 10px;
     padding: 10px;
   }
@@ -184,9 +274,12 @@ tbody {
     position: absolute;
     left: 10%;
     top: 10%;
-    max-width: 50%;
+    max-width: 400px;
     min-width: 150px;
     word-wrap: break-word;
     font-size: 36px;
+    padding: 2%;
+    margin: 2%;
+    border: 1px solid black;
   }
 }
