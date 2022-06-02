@@ -1,1 +1,28 @@
-{}
+{
+  "name": "forecast-for-cats",
+  "description": "Check the weather so easily, your cat could do it for you!",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd api/ && node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cireneirbo/forecast-for-cats.git"
+  },
+  "keywords": [
+    "express",
+    "react",
+    "heroku"
+  ],
+  "author": "Eric O'Brien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cireneirbo/forecast-for-cats/issues"
+  },
+  "homepage": "https://github.com/cireneirbo/forecast-for-cats#readme",
+  "dependencies": {
+    "heroku": "^7.60.2"
+  }
+}
